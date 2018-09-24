@@ -6,21 +6,22 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="refresh" content="5">
+    <meta http-equiv="refresh" content="10">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <title>Market</title>
 </head>
 <body>
     <form method="post">
         <div class="container">
-            <h2> Market Screen </h2>
+            <h1 class="align-content-center text-center"> <span class="badge font-weight-bold "> Market Screen </span> </h1>
 
 
-            <table class="table table-bordered">
-                <thead>
+            <table class="table table-bordered  table-light table-striped">
+                <thead class="thead-dark">
                     <tr>
-                        <th> Stock Name</th>
-                        <th>Price</th>
+                        <th scope="col"> Stock Name</th>
+                        <th scope="col">Price</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,17 +34,17 @@
                         </tr>
                     }
                 </tbody>
-                
-                @*<tbody>
-                    @foreach (var pri in ViewBag.pri)
-                     {
-                        <tr>
-                            <td>@pri</td>
 
-                        </tr>
-                     }
-                </tbody>*@
-                
+                @*<tbody>
+                        @foreach (var pri in ViewBag.pri)
+                         {
+                            <tr>
+                                <td>@pri</td>
+
+                            </tr>
+                         }
+                    </tbody>*@
+
             </table>
 
 
