@@ -9,7 +9,13 @@ namespace StockMangement.Models
     {
         public Nullable<int> Fk_StockID { get; set; }
 
-        private Double _price;
+
+        public static double GetNewPrice()
+        {
+            double Price = 50 + new Random().NextDouble();
+            return Price;
+        }
+        private Double _price = Order.GetNewPrice();
         public Double Price
         {
             get { return _price; }

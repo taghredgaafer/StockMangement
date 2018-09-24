@@ -26,6 +26,8 @@ namespace StockMangement.Models
         {
             Orders = new List<Order>();
         }
+
         public List<Order> Orders { get; set; }
+        
     }
 }

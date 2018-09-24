@@ -1,5 +1,5 @@
 ﻿
-
+@model Stock
 
 <!DOCTYPE html>
 
@@ -9,7 +9,44 @@
     <title>Market</title>
 </head>
 <body>
-    <div> 
-    </div>
+    <form method="post">
+        <div>
+            <h2> Market Screen </h2>
+
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> Stock Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var stock in ViewBag.stock)
+                    {
+                        <tr>
+                            <td>@stock.Name</td>
+                            <td>@stock.Price</td>
+
+                        </tr>
+                    }
+                </tbody>
+                
+                @*<tbody>
+                    @foreach (var pri in ViewBag.pri)
+                     {
+                        <tr>
+                            <td>@pri</td>
+
+                        </tr>
+                     }
+                </tbody>*@
+                
+            </table>
+
+
+
+        </div>
+    </form>
 </body>
 </html>
