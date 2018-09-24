@@ -20,6 +20,7 @@ namespace StockMangement.Models
             get { return _id; }
             set { _id = value; }
         }
+      
         public static double /*string*/ GetStockPrice()
         {
             double randomStockPrice = 50 + new Random().NextDouble();
