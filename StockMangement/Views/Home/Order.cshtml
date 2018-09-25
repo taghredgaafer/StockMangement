@@ -9,7 +9,16 @@
     <title>Order</title>
 </head>
 <body>
-    <div> 
+    <div>
+        <table>
+            @foreach (var stock in ViewBag.stock)
+            {
+                <tr>
+                    <td>@stock.Price</td>
+
+                </tr>
+            }
+        </table>
     </div>
 </body>
 </html>
