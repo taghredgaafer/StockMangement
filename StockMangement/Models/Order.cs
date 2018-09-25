@@ -6,8 +6,8 @@ using System.Web;
 namespace StockMangement.Models
 {
     public class Order
-    {
-        public Nullable<int> Fk_StockID { get; set; }
+    { // here i need to look again //
+        public Nullable<int> Fk_StockID { get /*{return  ; }*/; set /*{; }*/; } 
 
 
 
