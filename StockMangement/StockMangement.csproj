@@ -159,7 +159,7 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Market.cshtml" />
-    <Content Include="Views\Home\Order.cshtml" />
+    <Content Include="Views\Home\Orders.cshtml" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <None Include="Web.Debug.config">

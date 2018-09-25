@@ -10,12 +10,8 @@ namespace StockMangement.Models
         public Nullable<int> Fk_StockID { get; set; }
 
 
-        public static double GetNewPrice()
-        {
-            double Price = 50 + new Random().NextDouble();
-            return Price;
-        }
-        private Double _price = Order.GetNewPrice();
+
+        private Double _price;
         public Double Price
         {
             get { return _price; }
@@ -30,10 +26,21 @@ namespace StockMangement.Models
         }
 
         private int _comession;
-        public int Comession
+        public  int Comession
         {
             get { return _comession; }
             set { _comession = value; }
+        }
+
+        public static List<Order> ord = new List<Order>
+        {
+            new Order { Fk_StockID = 1 , Price = 40 , Quantity = 10 , Comession = 10},
+            new Order { Fk_StockID = 2 , Price = 55 , Quantity = 20 , Comession = 40}
+        };
+
+        public static List<Order> GetAll()
+        {
+            return Order.ord;
         }
     }
 }

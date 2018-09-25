@@ -1,0 +1,63 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>Order</title>
+</head>
+<body>
+    <form method="post">
+        <div class="container">
+            <h1 class="align-content-center text-center"> <span class="badge font-weight-bold "> Orders Screen </span> </h1>
+
+
+            <table class="table table-bordered  table-light table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Person Name</th>
+                        <th scope="col">Stock Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Comession</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var per in ViewBag.person)
+                    {
+                        <tr>
+                            <td>@per.Name</td>
+                            <td>@per.Order</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+            <div>
+                <table>
+                    @foreach (var stock in ViewBag.stock)
+                    {
+                        <tr>
+                            <td>@stock.Price</td>
+
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        </form>
+              
+</body>
+</html>

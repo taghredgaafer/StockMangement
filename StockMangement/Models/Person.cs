@@ -21,13 +21,21 @@ namespace StockMangement.Models
             set { _id = value; }
         }
 
-
+        public  List<Order> Orders { get { return Order.ord; } set { Orders = value ; } }
+       
         public Person()
         {
-            Orders = new List<Order>();
+            Orders = new List<Order>(Order.GetAll());
         }
-
-        public List<Order> Orders { get; set; }
-        
+       
+        public static List<Person> per = new List<Person>
+        {
+            new Person {ID =1 , Name = "person one", Orders = Order.ord.ToList()   },
+            new Person {ID =2 , Name = "person two", Orders = Order.ord.ToList()  },
+        };
+        public static List<Person> GetAll()
+        {
+            return Person.per;
+        }
     }
 }
