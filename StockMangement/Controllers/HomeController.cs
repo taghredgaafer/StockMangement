@@ -82,7 +82,7 @@ namespace StockMangement.Controllers
             Random rnd = new Random() ;
             ViewBag.randomstock = sto.OrderBy(x => rnd.Next()).Take(10);
             ViewBag.randomorder = ord.OrderBy(x => rnd.Next()).Take(1);
-            ViewBag.randomperson =  per.OrderBy(x => rnd.Next()).Take(1);
+            ViewBag.randomperson=  per.OrderBy(x => rnd.Next()).Take(1);
 
 
 
