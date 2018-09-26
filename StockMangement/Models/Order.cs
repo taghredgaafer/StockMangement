@@ -35,7 +35,12 @@ namespace StockMangement.Models
         public static List<Order> ord = new List<Order>
         {
             new Order { Fk_StockID = 1 , Price = 40 , Quantity = 10 , Comession = 10},
-            new Order { Fk_StockID = 2 , Price = 55 , Quantity = 20 , Comession = 40}
+            new Order { Fk_StockID = 2 , Price = 55 , Quantity = 20 , Comession = 40},
+
+
+
+
+
         };
 
         public static List<Order> GetAll()

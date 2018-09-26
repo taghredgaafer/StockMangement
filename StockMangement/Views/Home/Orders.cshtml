@@ -6,6 +6,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="refresh" content="10">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <title>Order</title>
@@ -14,50 +16,90 @@
     <form method="post">
         <div class="container">
             <h1 class="align-content-center text-center"> <span class="badge font-weight-bold "> Orders Screen </span> </h1>
-
-
-            <table class="table table-bordered  table-light table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Person Name</th>
-                        <th scope="col">Stock Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Comession</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var per in ViewBag.person)
-                    {
-                        <tr>
-                            <td>@per.Name</td>
-                            <td>@ViewBag.stock[0].Name</td>
-                            <td>@per.Orders[0].Price</td>
-                            <td>@per.Orders[0].Quantity</td>
-                            <td>@per.Orders[0].Comession</td>
-
-
-                        </tr>
-                    }
-                    @foreach (var per in ViewBag.person)
-                    {
-                        <tr>
-                            <td>@per.Name</td>
-                            <td>@ViewBag.stock[1].Name</td>
-                            <td>@per.Orders[1].Price</td>
-                            <td>@per.Orders[1].Quantity</td>
-                            <td>@per.Orders[1].Comession</td>
-
-
-                        </tr>
-                    }
-
-                </tbody>
-
-            </table>
+            <br />
+            <span class=" badge  text-center  "> <label class=" text-center  "> Orders made in the Sysytem </label> </span>
+            <br />
+            <br />
             <div>
+                <table class="table table-bordered  table-light table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Person Name</th>
+                            <th scope="col">Stock Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Comession</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var per in ViewBag.person)
+                        {
+                            <tr>
+                                <td>@per.Name</td>
+                                <td>@ViewBag.stock[0].Name</td>
+                                <td>@per.Orders[0].Price</td>
+                                <td>@per.Orders[0].Quantity</td>
+                                <td>@per.Orders[0].Comession</td>
+
+
+                            </tr>
+                        }
+                        @foreach (var per in ViewBag.person)
+                        {
+                            <tr>
+                                <td>@per.Name</td>
+                                <td>@ViewBag.stock[1].Name</td>
+                                <td>@per.Orders[1].Price</td>
+                                <td>@per.Orders[1].Quantity</td>
+                                <td>@per.Orders[1].Comession</td>
+
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            </div>
+            <hr />
+            <div class="badge"> New Order periodically Changable every 10 sec</div>
+            <br />
+            <br />
+            <div>
+                <table class="table table-bordered  table-light table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Person Or Broker Name</th>
+                            <th scope="col"> Stock Name </th>
+                            <th scope="col"> Price</th>
+                            <th scope="col"> Quantity</th>
+                            <th scope="col"> Comession</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var randst in ViewBag.randomstock)
+                        {
+                        <tr>
+                            <td></td>
+                            <td>@randst.Name</td>
+                            <td>@randst.Price</td>
+                            @foreach (var randor in ViewBag.randomorder)
+                            {
+                                <td>@randor.Comession </td>
+                                <td>@randor.Quantity</td>
+
+                            }
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+          
+            @*<div>
                 <table>
                     @foreach (var stock in ViewBag.stock)
                     {
@@ -67,7 +109,8 @@
                         </tr>
                     }
                 </table>
-            </div>
+            </div>*@
+
         </div>
         </form>
               
