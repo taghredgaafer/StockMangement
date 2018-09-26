@@ -83,36 +83,37 @@
                     <tbody>
                         @foreach (var randst in ViewBag.randomstock)
                         {
-                        <tr>
-                            <td></td>
-                            <td>@randst.Name</td>
-                            <td>@randst.Price</td>
-                            @foreach (var randor in ViewBag.randomorder)
-                            {
-                                <td>@randor.Comession </td>
-                                <td>@randor.Quantity</td>
+                            <tr>
+                                @foreach (var rndpe in ViewBag.randomperson)
+                                {<td>@rndpe.Name</td>}
+                                <td>@randst.Name</td>
+                                <td>@randst.Price</td>
+                                @foreach (var randor in ViewBag.randomorder)
+                                {
+                                    <td>@randor.Comession </td>
+                                    <td>@randor.Quantity</td>
 
-                            }
-                        </tr>
+                                }
+                            </tr>
                         }
                     </tbody>
                 </table>
             </div>
-          
-            @*<div>
-                <table>
-                    @foreach (var stock in ViewBag.stock)
-                    {
-                        <tr>
-                            <td>@stock.Price</td>
 
-                        </tr>
-                    }
-                </table>
-            </div>*@
+            @*<div>
+                    <table>
+                        @foreach (var stock in ViewBag.stock)
+                        {
+                            <tr>
+                                <td>@stock.Price</td>
+
+                            </tr>
+                        }
+                    </table>
+                </div>*@
 
         </div>
-        </form>
-              
+    </form>
+
 </body>
 </html>
